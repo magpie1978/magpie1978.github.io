@@ -1,5 +1,5 @@
 import { supabase } from "./supabaseClient.js";
-const loginPage = "./zulu-orchid-falcon.html";
+const loginPage = "./index.html";
 try {
   const { data, error } = await supabase.auth.getUser();
   if (error || !data?.user) {
