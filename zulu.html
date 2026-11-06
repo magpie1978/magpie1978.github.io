@@ -24,18 +24,47 @@
       font-family: system-ui, -apple-system, sans-serif;
     }
 
-    header {
-      padding: 70px 20px 40px;
-      text-align: center;
+    /* Large, centred ZOF logo header. */
+    .site-header {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 36px 90px;
+      min-height: 300px;
+      background: #111111;
+      border-bottom: 1px solid #2a2a2a;
     }
 
-    h1 {
-      font-size: clamp(30px, 5vw, 48px);
-      margin: 0 0 12px;
+    .site-logo {
+      display: block;
+      width: min(72vw, 760px);
+      max-height: 260px;
+      height: auto;
+      object-fit: contain;
     }
 
-    header p {
-      color: #9ca3af;
+    #signOut {
+      position: absolute;
+      right: 30px;
+      top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .site-header {
+        min-height: 210px;
+        padding: 62px 16px 24px;
+      }
+
+      .site-logo {
+        width: min(94vw, 520px);
+        max-height: 190px;
+      }
+
+      #signOut {
+        top: 12px;
+        right: 12px;
+      }
     }
 
     #signOut {
@@ -124,9 +153,8 @@
 </head>
 
 <body>
-  <header>
-    <h1>Zulu Orchid Falcon</h1>
-    <p>My projects, tools and websites</p>
+  <header class="site-header">
+    <img class="site-logo" src="./zof_logo.png" alt="Zulu Orchid Falcon">
     <button id="signOut" type="button">Sign Out</button>
   </header>
 
