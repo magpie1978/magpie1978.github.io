@@ -2,7 +2,7 @@ import { supabase } from "./supabaseClient.js";
 const form = document.getElementById("loginForm");
 const errorBox = document.getElementById("error");
 const button = form.querySelector('button[type="submit"]');
-const destination = "./zulu_index.html";
+const destination = "./index.html";
 let pending = false;
 // Existing authenticated users do not need to sign in again.
 try {
